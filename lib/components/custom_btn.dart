@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 class CustomBtn extends StatelessWidget {
   final String title;
-  final VoidCallback ontap; // VoidCallback é o tipo ideal para funções de clique simples
+  final VoidCallback ontap; 
 
-  // Incluindo as variáveis obrigatórias no construtor
+
   const CustomBtn({
     super.key, 
     required this.title, 

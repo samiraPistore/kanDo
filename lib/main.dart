@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:khan_do/controllers/tasks_provider.dart';
 import 'package:khan_do/routes/app_routes.dart';
 import 'package:khan_do/screens/add_task_screen.dart';
 import 'package:khan_do/screens/home_screen.dart';
 import 'package:khan_do/screens/kanban_screen.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(create: (context) => TaskProvider(), child: MyApp(),),);
 }
 
 class MyApp extends StatelessWidget {
@@ -14,6 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.light(

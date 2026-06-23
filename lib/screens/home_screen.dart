@@ -9,33 +9,35 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Header(),
-
-            CustomBtn(
-              title: 'Cadastrar atividade',
-              ontap: () {
-                Navigator.of(context).pushNamed(AppRoutes.newTask);
-              },
-            ),
-            CustomBtn(
-              title: 'Ver kanban',
-              ontap: () {
-                Navigator.of(context).pushNamed(AppRoutes.kanban);
-              },
-            ), 
-            CustomBtn(
-              title: 'Gerar relatório',
-              ontap: () {
-                Navigator.of(context).pushNamed(AppRoutes.kanban);
-              },
-            ),
-            
-            
-          ],
+      body: SafeArea(
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Header(),
+        
+              CustomBtn(
+                title: 'Cadastrar atividade',
+                ontap: () {
+                  Navigator.of(context).pushNamed(AppRoutes.newTask);
+                },
+              ),
+              CustomBtn(
+                title: 'Ver kanban',
+                ontap: () {
+                  Navigator.of(context).pushNamed(AppRoutes.kanban);
+                },
+              ), 
+              CustomBtn(
+                title: 'Gerar relatório',
+                ontap: () {
+                  Navigator.of(context).pushNamed(AppRoutes.kanban);
+                },
+              ),
+              
+              
+            ],
+          ),
         ),
       ),
     );
